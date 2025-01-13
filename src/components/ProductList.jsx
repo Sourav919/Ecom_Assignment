@@ -110,7 +110,12 @@ const ProductList = () => {
           <div key={product.id} className="product-card">
             <div
               className="product-info"
-              onClick={() => navigate(`/product/${product.id}`)} // Navigate to ProductDetails
+              onClick={() =>
+                navigate(`/product`, {
+                  state: { product }, // Pass the product object as state
+                })
+              }
+             
               style={{ cursor: "pointer" }}
             >
               <img src={product.image} alt={product.title} />

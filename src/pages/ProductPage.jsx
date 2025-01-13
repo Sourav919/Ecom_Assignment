@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import axios from "axios";
 import './ProductPage.css';
 
 
 const ProductPage = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState(null);
-
-  useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${id}`).then((response) => {
-      setProduct(response.data);
-    });
-  }, [id]);
+  
+  const location = useLocation();
+  const { product } = location.state;
+  
 
   if (!product) {
     return <div>Loading...</div>;

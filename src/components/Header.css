@@ -1,0 +1,57 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between; /* Aligns content (title and cart) on both ends */
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0;
+  }
+  
+  .cart-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cart-img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .cart-count {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  /* Cart Icon Hover Effect */
+  .cart-img:hover {
+    opacity: 0.7;
+  }
+  
+  /* Link style for the cart icon */
+  .cart-icon a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cart-icon a:hover {
+    color: #ff9900; /* Change color on hover */
+  }
+  

@@ -10,13 +10,16 @@ export const CartProvider = ({ children }) => {
   // Function to add a product to the cart
   const addToCart = (product) => {
     setCart((prevCart) => {
-      // Check if the product already exists in the cart
+      // Find the product in the cart
       const productIndex = prevCart.findIndex((item) => item.id === product.id);
-
+  
       if (productIndex >= 0) {
         // If the product is already in the cart, increase the quantity
-        const updatedCart = [...prevCart];
-        updatedCart[productIndex].quantity += 1;
+        const updatedCart = prevCart.map((item, index) => 
+          index === productIndex
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
         return updatedCart;
       } else {
         // If the product is not in the cart, add it with quantity 1
@@ -24,6 +27,7 @@ export const CartProvider = ({ children }) => {
       }
     });
   };
+  
 
   // Function to remove a product from the cart
   const removeFromCart = (productId) => {

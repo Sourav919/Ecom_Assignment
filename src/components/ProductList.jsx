@@ -10,6 +10,7 @@ const ProductList = () => {
   const [search, setSearch] = useState(""); // Search input
   const [category, setCategory] = useState(""); // Category filter
   const [sortBy, setSortBy] = useState(""); // Sorting option
+  const [popupMessage, setPopupMessage] = useState(""); // State for popup message
   const { addToCart } = useContext(CartContext); // Access addToCart function from context
   const navigate = useNavigate(); // For navigation
 
@@ -61,6 +62,13 @@ const ProductList = () => {
     // Set filtered products after sorting and filtering
     setFilteredProducts(filtered);
   }, [search, category, sortBy, products]); // Reapply filtering and sorting whenever any dependency changes
+
+  // Handle add to cart and show popup message
+  const handleAddToCart = (product) => {
+    addToCart(product); // Add to cart functionality
+    setPopupMessage(`Added "${product.title}" to cart!`); // Set popup message
+    setTimeout(() => setPopupMessage(""), 3000); // Remove popup message after 3 seconds
+  };
 
   if (loading) {
     return <p>Loading products...</p>;
@@ -115,7 +123,6 @@ const ProductList = () => {
                   state: { product }, // Pass the product object as state
                 })
               }
-             
               style={{ cursor: "pointer" }}
             >
               <img src={product.image} alt={product.title} />
@@ -123,14 +130,19 @@ const ProductList = () => {
               <p>Price: ${product.price}</p>
               <p>Category: {product.category}</p>
             </div>
-            <button
-              onClick={() => addToCart(product)} // Add to cart functionality here
-            >
+            <button onClick={() => handleAddToCart(product)}>
               Add to cart
             </button>
           </div>
         ))}
       </div>
+
+      {/* Popup Message */}
+      {popupMessage && (
+        <div className="popup-message">
+          {popupMessage}
+        </div>
+      )}
     </div>
   );
 };

@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+This project is a dynamic e-commerce application that allows users to browse, filter, sort, and search for products. It also includes the functionality to add products to a shopping cart.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
 
-## Available Scripts
+ 1. Browse products from an external API (FakeStore API).
+ 2. Filter products by category.
+ 3. Search products by name.
+ 4. Sort products by price (low to high, high to low) or rating (high to low).
+ 5. Add products to the cart with a confirmation popup.
 
-In the project directory, you can run:
+Getting Started
 
-### `npm start`
+Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Node.js installed on your system.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. A package manager like npm or yarn.
 
-### `npm test`
+Steps to Run the Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the Repository
+    git clone <repository-url>
 
-### `npm run build`
+2. Navigate to the Parent Directory
+    cd <project-folder>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. Install Dependencies
+    npm install
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start the Development Server
+    npm start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will start the application and serve it at http://localhost:3000 by default.
 
-### `npm run eject`
+Live Application: https://ecomassignment.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Technologies Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Frontend: React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Styling: CSS Modules
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Backend API: FakeStore API
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. Hosting: Vercel

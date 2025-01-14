@@ -19,16 +19,16 @@ Prerequisites
 Steps to Run the Project
 
 1. Clone the Repository
-    git clone <repository-url>
+   -- [ git clone <repository-url> ]
 
 2. Navigate to the Parent Directory
-    cd <project-folder>
+  --  [ cd <project-folder> ]
 
 3. Install Dependencies
-    npm install
+  -- [  npm install ]
 
 4. Start the Development Server
-    npm start
+  -- [  npm start ]
 
 This will start the application and serve it at http://localhost:3000 by default.
 
